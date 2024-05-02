@@ -3,7 +3,7 @@
 
 ### En esta plataforma creamos un diseño sencillo pero encantador, pensado para hacer más amigable y eficiente nuestro trabajo diario. Con herramientas intuitivas y un aspecto agradable, buscamos facilitar la gestión y colaboración dentro de tu negocio. ¡Explora y disfruta de esta nueva experiencia digital.
 
-<p align="center"><img src="https://github.com/alamodeg/rollingMarket/blob/feat/readMe/src/assets/img/gifREADME/FotoPresentacion.png"/></p> 
+<p align="center"><img src="https://github.com/JulianMartin98/rollingMarketFront/blob/feat/readME/src/assets/img/gifREADME/FotoPresentacion.png"/></p> 
 
 </div>
 
@@ -32,20 +32,20 @@
 
 
   #### **2** Ingresa a nuestro repositorio en github y copia el link del repo https://github.com/alamodeg/rollingMarket.
-  <img src= "https://github.com/JulianMartin98/rollingMarketFront/blob/feat/readME/src/assets/img/gifREADME/2IngresandoARepo.gif"></img>
+  <img src= "https://github.com/JulianMartin98/rollingMarketFront/blob/feat/readME/src/assets/img/gifREADME/2IngresandoARepo-ezgif.com-resize.gif"></img>
   
 
   #### 3 Dentro de la carpeta que creaste en el **paso (1)** hace click derecho y ejecuta cualquier consola de tu preferencia, sea CMD-GitBash-PowerShell-Etc. (**Recomendamos** utilizar **_Git Bash_**").
-  <img src= "https://github.com/JulianMartin98/rollingMarketFront/blob/feat/readME/src/assets/img/gifREADME/3IngresandoTerminal.gif"></img>
+  <img src= "https://github.com/JulianMartin98/rollingMarketFront/blob/feat/readME/src/assets/img/gifREADME/3IngresandoTerminal-ezgif.com-resize.gif"></img>
   
   
   #### 4. Utiliza el comando **git clone** seguido de la _URL_ que copiaste anteriormente. (__Ejemplo__: git clone https://github.com/alamodeg/rollingMarket). Presiona **Enter** y se descargará automáticamente el repositorio en tu máquina local.
-  <img src="https://github.com/JulianMartin98/rollingMarketFront/blob/feat/readME/src/assets/img/gifREADME/4ClonandoRepo.gif"></img>
+  <img src="https://github.com/JulianMartin98/rollingMarketFront/blob/feat/readME/src/assets/img/gifREADME/4ClonandoRepo-ezgif.com-resize.gif"></img>
 
   
   #### 5. ¡Ya casi estamos! Una vez clonado nuestro proyecto, debes ingresar el comando "**npm i**" en la terminal del VisualStudio, de esta forma instalas todos los paquetes y librerias necesari@s para utilizar nuestro sistema.(Recordá escribir el comando "npm run dev" para ejectura el proyecto")
 
-  <img src="https://github.com/JulianMartin98/rollingMarketFront/blob/feat/readME/src/assets/img/gifREADME/6InstalandoNPM.gif"></img>
+  <img src="https://github.com/JulianMartin98/rollingMarketFront/blob/feat/readME/src/assets/img/gifREADME/5InstalandoNPM-ezgif.com-resize.gif"></img>
 
 
 ## Despliegue 📦  <a name="informacion"></a>
