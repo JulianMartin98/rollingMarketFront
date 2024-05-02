@@ -1,0 +1,66 @@
+.cardLoginPrincipal {
+  width: 75%;
+  margin: 30px;
+  transition: all 0.4s;
+}
+
+.colLoginPrincipal {
+  margin: 50px;
+}
+
+.cardLoginPrincipal:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+.formLogin {
+  width: 80%;
+  margin: 30px;
+}
+
+.formLogin {
+  margin: 50px;
+}
+
+.botonFormLogin {
+  background-color: #FF5733;
+  border-color: #FF5733;
+}
+
+.botonFormLogin:hover {
+  background-color: #808080 !important;
+  border-color: #808080 !important;
+}
+
+.bodyLogin {
+  background-image: url('../../assets/img/login/fondo.jpg');
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  /* Establece la imagen de fondo como fija */
+}
+
+.etiquetaLogin {
+  color: blue;
+  text-decoration: underline;
+}
+
+.imagenRegistro {
+  width: 80%; 
+  max-width: 300px;
+  margin-top: 40px;
+}
+
+.opcionRegistro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.opcionContraseñaLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
