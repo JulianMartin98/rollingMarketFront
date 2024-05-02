@@ -74,7 +74,7 @@ _Nuestro deploy_:
 RollingMarket no seria posible sin nuestro equipo de desarrollo, conocenos:
 
 
-* **Julián Martín** | *[Documentacion FrontEnd BackEnd]* | https://github.com/JulianMartin98 | https://www.linkedin.com/in/julian-martin-9903aa1ba/
+* **Julián Martín** | *[FrontEnd BackEnd]* | https://github.com/JulianMartin98 | https://www.linkedin.com/in/julian-martin-9903aa1ba/
 
 * **Alvaro Deguer** | *[FrontEnd BackEnd]* | https://github.com/alamodeg | 
 
