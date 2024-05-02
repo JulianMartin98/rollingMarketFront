@@ -5,7 +5,6 @@ import UsersContext from './context/UsersContext';
 import { Navigator } from './components/navBar/Navigator';
 import Footer from './components/footer/Footer';
 
-
 function App() {
 
 

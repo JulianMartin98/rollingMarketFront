@@ -1,0 +1,66 @@
+.imgBack {
+    background-image: url('../../assets/img/error404/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.imgShoppingCart {
+    max-width: 100%;
+}
+
+.tittleError {
+    color: #af2b16;
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+@media (max-width: 768px) {
+    .tittleError {
+        color: #af2b16;
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .buttomBack {
+        margin-bottom: 30px;
+        padding: 0.6em 1em;
+        border: 4px solid #fa725a;
+        transition: ease-in-out 0.3s;
+        background-color: transparent;
+        color: #ff553b;
+        font-weight: bolder;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+}
+
+.buttomBack {
+    margin-top: 40px;
+    padding: 0.6em 1em;
+    border: 4px solid #fa725a;
+    transition: ease-in-out 0.3s;
+    background-color: transparent;
+    color: #ff553b;
+    font-weight: bolder;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.buttomBack:hover {
+    background-color: #ff553b;
+    border-color: #af2b16;
+    color: white;
+    transform: scale(1.1) rotate(6deg);
+    color: white;
+}
+
+.buttomBack:active {
+    background-color: #ff553b !important;
+    border-color: #af2b16 !important;
+    color: white !important;
+}
