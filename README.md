@@ -78,9 +78,9 @@ RollingMarket no seria posible sin nuestro equipo de desarrollo, conocenos:
 
 * **Alvaro Deguer** | *[FrontEnd BackEnd]* | https://github.com/alamodeg | 
 
-* **Jorge Luis Avalos Medina** | *[FrontEnd BackEnd]* | https://github.com/AvalosJorge | 
+* **Jorge Luis Avalos Medina** | *[FrontEnd BackEnd]* | https://github.com/AvalosJorge | https://www.linkedin.com/in/jorge-avalos-medina?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 
-* **Gabriel Enrique Urueña** | *[FrontEnd BackEnd]* | https://github.com/GabrielUruena01 | 
+* **Gabriel Enrique Urueña** | *[FrontEnd BackEnd]* | https://github.com/GabrielUruena01 | https://www.linkedin.com/in/gabriel-enrique-urue%C3%B1a-7b60552a7
 
 * **Ignacio Skibski** | *[FrontEnd BackEnd]* | https://github.com/nachoo07 | 
 
