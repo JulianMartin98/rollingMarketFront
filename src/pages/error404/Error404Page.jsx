@@ -1,11 +1,10 @@
-import Error from './../../components/error404/Error';
+import React from 'react'
+import Error404 from '../../components/error404/Error404';
 
-const Error404Page = () => {
+export const Error404Page = () => {
   return (
     <>
-      <Error/>
+      <Error404 />
     </>
   )
-}
-
-export default Error404Page
+};
