@@ -7,8 +7,8 @@ import imgCarrito from '../../assets/img/navBar/imgCarrito.png';
 import logo3 from '../../assets/img/navBar/logo3.png';
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from 'react';
-import Login from '../login/Login';
-import { UsersProvider } from '../../context/UsersContext';
+// import Login from '../login/Login';
+// import { UsersProvider } from '../../context/UsersContext';
 
 
 
