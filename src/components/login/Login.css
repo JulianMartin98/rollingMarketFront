@@ -45,6 +45,12 @@
   text-decoration: underline;
 }
 
+.imagenRegistro {
+  width: 80%; 
+  max-width: 300px;
+  margin-top: 40px;
+}
+
 .opcionRegistro {
   display: flex;
   justify-content: center;

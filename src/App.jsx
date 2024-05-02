@@ -3,7 +3,8 @@ import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
 import UsersContext from './context/UsersContext';
-
+import { Navigator } from './components/navBar/Navigator';
+import { LoginPage } from './pages/login/LoginPage';
 
 function App() {
 
@@ -12,11 +13,11 @@ function App() {
     <>
 
       <UsersContext>
-        {/* <ProductosContext>
+        {/* <ProductosContext> */}
           <Navigator />
-          <Rutas />
-          <Footer />
-        </ProductosContext> */}
+          {/* <Rutas /> */}
+          {/* <Footer /> */}
+        {/* </ProductosContext> */}
       </UsersContext>
 
     </>
