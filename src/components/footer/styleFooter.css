@@ -1,0 +1,95 @@
+.containerFooter {
+    background-color: #dad3d3b0;
+}
+
+.logoFooter {
+    height: 100px;
+    border-radius: 100%;
+
+}
+
+.logoFooter:hover {
+    transform: scale(1.1);
+}
+
+.copyright {
+    background-color: #FF553B;
+}
+
+
+@media (max-width: 767px) {
+
+    .titleList,
+    .article {
+        list-style-type: none;
+        text-align: center;
+        padding-left: 0%;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .titleList,
+    .article {
+        list-style-type: none;
+        text-align: start;
+        padding-left: 0%;
+        font-size: 16px;
+    }
+
+    .category {
+        padding-left: 80px;
+    }
+
+
+}
+
+
+.titleList {
+    font-weight: bold;
+    color: #000000a6;
+}
+
+.article a {
+    text-decoration: none;
+    color: #03030391;
+}
+
+.article {
+    color: #03030391;
+}
+
+.article a:hover {
+    color: #ff553b;
+}
+
+.copy,
+a {
+    color: white;
+    ;
+}
+
+.copy a:hover {
+    color: #6d1d11;
+}
+
+.networkList li {
+    list-style-type: none;
+    display: inline;
+}
+
+.networkList {
+    padding: 0%;
+}
+
+.networkList a {
+    text-decoration: none;
+    color: #e8e8e9;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.networkList a:hover {
+    color: #6d1d11;
+}
