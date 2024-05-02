@@ -92,11 +92,11 @@ RollingMarket no seria posible sin nuestro equipo de desarrollo, conocenos:
 Por ultimo pero no menos importante, no queriamos dejar de lado a todas esas personas que nos brindaron su ayuda y estuvieron presente durante todo el proceso de desarrollo de nuestro proyecto._
 
 
-* A la academia **RollingCode** por brindarnos esta beca y la posiblidad de acceder 
+* A la academia **RollingCode** por brindarnos esta beca y la posibilidad de formarnos para ser mejores profesionales. 
 * A nuestro querido profe **Diego Olmi**, por haber transmitido todos los conocimientos necesarios para el desarrollo del proyecto, por su buena onda y sinceridad siempre por delante de cada clase.
 * A nuestro tutor **Francisco Iturburu**, por su disposición y rapidez para resolver cualquier conflicto, inquietud o duda que se nos puede haber presentado.
 * _Mencion especial_ para **Ezequiel Massa** por ser un excelente amgio y compañero, brindandonos ayuda en situaciones donde nuestros conocimientos parecian no dar a basto.
-* Y a todos nuestros compañeros que formaron parte del proceso de aprendizaje
+* A todos nuestros compañeros que formaron parte del proceso de aprendizaje
 
 - Gracias Totales ❤️
 
