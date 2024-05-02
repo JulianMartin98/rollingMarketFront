@@ -1,0 +1,78 @@
+.containerAboutUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cardSecundariaAboutUs {
+  width: 18rem;
+  margin: 10px 10px 10px 10px;
+  transition: all 0.4s;
+}
+
+.cardPrincipalAboutUs {
+  width: 18rem;
+  margin: 10px 10px 10px 10px;
+  transition: all 0.4s;
+}
+
+.primeraCardAboutUs {
+  margin-top: 20px;
+}
+
+.botonCardPrincipalAboutUs {
+  background-color: #FF5733;
+  border-color: #FF5733;
+}
+
+
+.botonCardSecuAboutUs {
+  background-color: #FF5733;
+  border-color: #FF5733;
+}
+
+.cardPrincipalAboutUs {
+  width: 90%;
+}
+
+.bodyAboutUs {
+  background-image: url('../../assets/img/aboutUs/fondo.jpg');
+  background-size: auto;
+  background-repeat: repeat;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+.cardSecundariaAboutUs img {
+  filter: grayscale(100%);
+  transition: all 0.4s;
+}
+
+.cardSecundariaAboutUs:hover img {
+  filter: grayscale(0%);
+}
+
+.cardSecundariaAboutUs:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+.cardPrincipalAboutUs:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+.grupoBotonesAboutUsHover .btn-primary:hover {
+  background-color: #808080 !important;
+  border-color: #808080 !important;
+}
+
+.card-principal-hover .btn-primary:hover {
+  background-color: #808080 !important;
+  border-color: #808080 !important;
+}
+
+.segundaFila {
+  margin-bottom: 20;
+}
