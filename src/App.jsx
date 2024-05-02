@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
-
+import UsersContext from './context/UsersContext';
 
 
 function App() {
@@ -10,14 +10,14 @@ function App() {
 
   return (
     <>
-{/* 
+
       <UsersContext>
-        <ProductosContext>
+        {/* <ProductosContext>
           <Navigator />
           <Rutas />
           <Footer />
-        </ProductosContext>
-      </UsersContext> */}
+        </ProductosContext> */}
+      </UsersContext>
 
     </>
   )
