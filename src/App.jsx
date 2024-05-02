@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
 import UsersContext from './context/UsersContext';
 import { Navigator } from './components/navBar/Navigator';
-import { LoginPage } from './pages/login/LoginPage';
+import Footer from './components/footer/Footer';
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
         {/* <ProductosContext> */}
           <Navigator />
           {/* <Rutas /> */}
-          {/* <Footer /> */}
+          <Footer />
         {/* </ProductosContext> */}
       </UsersContext>
 
