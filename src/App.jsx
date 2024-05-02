@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
-import { ContactPage } from './pages/contact/ContactPage';
+
 
 
 
@@ -18,7 +18,7 @@ function App() {
           <Footer />
         </ProductosContext>
       </UsersContext> */}
-      <ContactPage></ContactPage>
+
 
     </>
   )
