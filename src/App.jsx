@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
-import { AboutUs } from './components/aboutUs/AboutUs';
+
 
 
 
@@ -19,7 +19,7 @@ function App() {
           <Footer />
         </ProductosContext>
       </UsersContext> */}
-      <AboutUs/>
+
     </>
   )
 }
