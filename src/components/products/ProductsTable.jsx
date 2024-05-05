@@ -1,8 +1,8 @@
 import { Table, Button, Modal, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useState } from "react";
-import { ProductsProvider } from "../../../context/ProductsContext";
-// import FormProductos from "../formProductos/FormProductos";
+import { ProductsProvider } from "../../context/ProductsContext";
+import ProductsForm from "../products/ProductsForm";
 
 const ProductsTable = () => {
   const { productos, deleteProductos } = useContext(ProductsProvider);
@@ -38,7 +38,6 @@ const ProductsTable = () => {
           Agregar Producto
         </Button>
       </div>
-
       {productos.length === 0 ? (
         <h1 className="text-center">No hay productos para mostrar</h1>
       ) : (
@@ -119,11 +118,10 @@ const ProductsTable = () => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {" "}
-          <FormProductos
+          <ProductsForm
             editarProductos={editarProductos}
             handleClose={handleClose}
-          />{" "}
+          />
         </Modal.Body>
       </Modal>
     </>
