@@ -91,7 +91,7 @@ const ProductsContext = ({children}) => {
     const updateProductos = async (producto) => {
       try {
         const token = localStorage.getItem("token");
-        await axios.put(`https://rollingmarketbe1.onrender.com/producto/update/${producto.id}`, producto
+        await axios.put(`http://localhost:4000/api/product/update/${producto.id}`, producto
         ,{
           headers: {
             authorization:`${token}`,
