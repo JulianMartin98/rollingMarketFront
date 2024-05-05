@@ -1,0 +1,258 @@
+/*BOTONES DEL CRUD INICIO*/
+
+.boton-crud{
+    background-color: #FF553B !important;
+    color: aliceblue !important;
+    margin: 15px 10px 0px 0px!important;
+}
+
+/*BOTON DE AGREGAR MODAL*/
+.boton-agregar-modal{
+    background-color: #FF553B !important;
+    color: aliceblue !important;
+    margin: 0px 15px 0px 45px!important;
+    width: 80%;
+}
+/*BOTON DE AGREGAR MODAL*/
+
+.modal-header{
+    padding: 6px 15px;
+}
+/*BOTONES DEL CRUD FIN*/
+
+h5{
+    margin-top: 15px;
+    font-size: 20px;
+    }
+
+
+.subtitulo-tabla{
+    font-size: 18px ;
+    
+}
+.contenido-tabla{
+    font-size: 18px;
+}
+
+/*TITULO ADMINISTRAR*/
+.titulo-admin{
+    padding: 10px;
+    color: #FF553B;
+    border-radius: 5px;
+    font-size: 50px;
+}
+.titulo-admin2{
+    padding: 10px;
+    color: #FF553B;
+    border-radius: 5px;
+    font-size: 50px;
+}
+/*TITULO ADMINISTRAR*/
+.imagen{
+    width: 15px;
+    text-align: center;
+
+}
+tr{
+    font-size: 15px;
+    text-align: center;
+    
+}
+.boton-agregar-producto-padre{
+    display: flex;
+    justify-content:flex-end;
+    margin: 15px 15px 0px 0px;
+    text-decoration: none;
+
+}
+
+.boton-agregar-producto{
+    margin-left: 300px;
+    position: relative;
+    background-color: #FF553B !important;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 240px;
+    height: 50px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+    color: white !important;
+    font-size: 23px !important;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+}
+.boton-agregar-producto::before{
+    content: "";
+    background-color: #fc3b1d ;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+    
+}
+
+.boton-agregar-producto:hover::before{
+    width: 100%;
+}
+
+.precios{
+    margin: 0px;
+    font-size: 18px;
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+
+}
+
+/* Estilos para pantallas tablet: iPad Mini */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    .boton-agregar-producto{
+        margin: 5px 15px 0px 15px;
+        width: 230px;
+        font-size: 25px !important;
+    }
+
+    /*TITULO ADMINISTRAR*/
+    .titulo-admin{
+        margin-right: 70px;
+        margin-bottom: 0px;
+        font-size: 40px !important;
+    }
+/*TITULO ADMINISTRAR*/
+th{
+    padding: 4px !important;
+    
+}
+.container{ 
+    padding: 0px;
+}
+.boton-crud{
+    margin: 5px 5px 5px 0px!important;
+}
+}
+
+/* Tamaño tablet (768-480) */
+@media all and (min-width: 481px) and (max-width: 768px) { 
+    .boton-agregar-producto{
+        margin: 5px 15px 0px 15px;
+        width: 230px;
+        font-size: 25px !important;
+    }
+
+    /*TITULO ADMINISTRAR*/
+.titulo-admin{
+    margin-right: 70px;
+    margin-bottom: 0px;
+}
+/*TITULO ADMINISTRAR*/
+
+/*OCULTAR COLUMNAS*/
+.columna-categoria{
+    display: none;
+}
+.columna-fecha{
+    display: none;
+}
+/*OCULTAR COLUMNAS*/
+
+.boton-crud{
+    margin: 5px 5px 5px 0px!important;
+}
+th{
+    padding: 4px !important;
+    
+}
+.container{ 
+    padding: 0px;
+}
+
+.titulo-admin{
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 35px;
+    font-size: 30px;
+    text-decoration:underline;
+}
+
+.boton-agregar-producto{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 260px;
+    text-align: center !important;
+    font-size: 18px !important;
+}
+}
+
+
+ /* Tamaño teléfonos (480-menos ) */
+ @media all and (max-width: 480px) { 
+
+    .boton-agregar-producto{
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 300px;
+        text-align: center !important;
+        font-size: 25px !important;
+    }
+
+    /*TITULO ADMINISTRAR*/
+.titulo-admin{
+    width: 100%;
+    margin-bottom: 0px;
+    font-size: 30px;
+    text-decoration:underline;
+}
+
+.boton-agregar-producto-padre{
+    display: flex;
+    flex-direction: column;
+    text-align: center ;
+    margin: 15px;
+
+}
+
+.subtitulo-tabla{
+    text-align: center;
+    font-size: 13px ;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.container{ 
+    padding: 0px;
+}
+/*OCULTAR COLUMNAS*/
+.columna-categoria{
+    display: none;
+}
+.columna-imagen{
+    display: none;
+}
+.columna-fecha{
+    display: none;
+}
+/*OCULTAR COLUMNAS*/
+.boton-crud{
+    margin: 5px 0px 5px 0px!important;
+}
+
+th{
+    padding: 4px !important;
+    
+}
+
+h5{
+margin-top: 25px;
+font-size: 20px;
+}
+    }
