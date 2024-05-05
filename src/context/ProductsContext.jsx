@@ -12,7 +12,7 @@ const ProductsContext = ({children}) => {
     const obtenerProductos = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("https://rollingmarketbe1.onrender.com/productos"
+        const response = await axios.get("http://localhost:4000/api/product/"
         ,{
           headers: {
             authorization:`${token}`,
@@ -28,7 +28,7 @@ const ProductsContext = ({children}) => {
     const addProducto = async (producto) => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.post("https://rollingmarketbe1.onrender.com/product", producto
+        const response = await axios.post("http://localhost:4000/api/product/create", producto
         ,{
           headers: {
             authorization:`${token}`,
@@ -36,6 +36,7 @@ const ProductsContext = ({children}) => {
         });
         
         setProductos([...productos, response.data])
+        obtenerProductos();
       } catch (error) {
         console.log(error)
       }
@@ -72,7 +73,7 @@ const ProductsContext = ({children}) => {
         });
     
         if (confirmacion.isConfirmed) {
-          await axios.delete(`https://rollingmarketbe1.onrender.com/producto/delete/${id}`
+          await axios.delete(`http://localhost:4000/api/product/delete/${id}`
           ,{
             headers: {
               authorization:`${token}`,
