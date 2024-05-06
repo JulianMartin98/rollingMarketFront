@@ -28,7 +28,7 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
     //Helper validador de link de la imagen
     const isImageUrlValid = (url) => {
         const imageUrlPattern = /\.(jpeg|jpg|gif|png|bmp)$/i; // Extensiones de imágenes admitidas
-        const webUrlPattern = /^(https?:\/\/)?[^\s\/$.?#].[^\s]*$/i; // URL válida
+        const webUrlPattern = /^(https?:\/\/)?[^\s\/$.?#].[^\s]*$/i;
         return imageUrlPattern.test(url) && webUrlPattern.test(url);
     };
     
