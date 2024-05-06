@@ -45,7 +45,7 @@ const ProductsContext = ({children}) => {
     const getCategoria = async (category) => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`https://rollingmarketbe1.onrender.com/producto/categoria/${category}`
+        const response = await axios.get(`http://localhost:4000/api/product/category/${category}`
       
         ,{
           headers: {
