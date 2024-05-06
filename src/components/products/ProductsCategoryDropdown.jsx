@@ -2,7 +2,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { useContext,useState } from 'react';
 import { ProductsProvider } from '../../context/ProductsContext';
 
-function DropdownCategoria() {
+function ProductsCategoryDropdown() {
   const { getCategoria } = useContext(ProductsProvider);
   
   const handleCategorySelect = (categoria) => {
@@ -30,9 +30,15 @@ function DropdownCategoria() {
         <Dropdown.Item onClick={() => handleCategorySelect('Otros')}>
           Otros
         </Dropdown.Item>
+        <Dropdown.Divider />
+        <Dropdown.Item onClick={() => handleCategorySelect('Todos')}>
+          Todos
+        </Dropdown.Item>
+
+
       </Dropdown.Menu>
     </Dropdown>
   );
 }
 
-export default DropdownCategoria;
+export default ProductsCategoryDropdown;
