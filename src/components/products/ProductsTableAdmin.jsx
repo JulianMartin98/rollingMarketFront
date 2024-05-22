@@ -3,12 +3,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useState } from "react";
 import { ProductsProvider } from "../../context/ProductsContext";
 import ProductsForm from "./ProductsFormAdmin";
-import  '../products/TableStyle.css'
+import '../products/TableStyle.css'
 
 const ProductsTable = () => {
   const { productos, deleteProductos } = useContext(ProductsProvider);
   const [editarProductos, setEditarProductos] = useState(null);
-
   const [show, setShow] = useState(false);
   //formateo de hora
   const formatDate = (dateString) => {
@@ -30,7 +29,8 @@ const ProductsTable = () => {
 
   return (
     <>
-      <div className="boton-agregar-producto-padre">
+    <div>
+      <div className="d-flex justify-content-center text-decoration-none">
         <h2 className="titulo-admin">Administrar Productos</h2>
         <Button
           className="boton-agregar-producto"
@@ -43,7 +43,7 @@ const ProductsTable = () => {
         <h1 className="text-center">No hay productos para mostrar</h1>
       ) : (
         <Container>
-          <Table variant="link" className="tabla" striped bordered hover>
+          <Table variant="link" responsive striped bordered hover>
             <thead>
               <tr className="subtitulo-tabla">
                 <th>Producto</th>
@@ -60,7 +60,7 @@ const ProductsTable = () => {
             </thead>
             <tbody>
               {productos.map((producto) => (
-                <tr className="contenido-tabla">
+                <tr key={producto._id} className="contenido-tabla">
                   <td>
                     <h5></h5>
                     {producto.name}
@@ -125,6 +125,7 @@ const ProductsTable = () => {
           />
         </Modal.Body>
       </Modal>
+      </div>
     </>
   );
 };

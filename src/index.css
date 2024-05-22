@@ -1,0 +1,7 @@
+.bodyAdminPage {
+  background-image: url('./assets/img/aboutUs/fondo.jpg');
+  background-size: auto;
+  background-repeat: repeat;
+  width: 100%;
+  background-attachment: fixed;
+}
