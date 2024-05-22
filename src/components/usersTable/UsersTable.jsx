@@ -45,7 +45,7 @@ const UsersTable = () => {
 
       </Container>
     
-    {/* {usuarios.length === 0 ? (
+    {usuarios.length === 0 ? (
       <h1 className="text-center">No hay usuarios para mostrar</h1>
     ) : (
       <Container >
@@ -85,7 +85,7 @@ const UsersTable = () => {
       
     </Table>
     </Container>
-    )} */}
+    )}
       
     </>
     
