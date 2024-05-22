@@ -96,14 +96,14 @@ const ProductsTable = () => {
                       onClick={() => handleEdit(producto)}
                       variant="link"
                     >
-                      <i class="bi bi-pencil-square"></i>
+                      <i className="bi bi-pencil-square"></i>
                     </Button>
                     <Button
                       className="boton-crud"
                       variant="link"
                       onClick={() => deleteProductos(producto._id)}
                     >
-                      <i class="bi bi-trash"></i>
+                      <i className="bi bi-trash"></i>
                     </Button>
                   </td>
                 </tr>

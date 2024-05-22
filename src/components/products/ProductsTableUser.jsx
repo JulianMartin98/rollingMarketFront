@@ -72,7 +72,7 @@ const ProductsTableUser = () => {
           <td className='columna-fecha'><h5></h5>{formatDate(producto.updatedAt)}</td>
           <td className='columna-imagen'><img src={producto.image} style={{ width: '70px', height: '60px' }} /></td>
           <td>
-            <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i class="bi bi-pencil-square"></i></Button>
+            <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i className="bi bi-pencil-square"></i></Button>
           </td>
         </tr>
         ))}

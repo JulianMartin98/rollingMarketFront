@@ -30,14 +30,14 @@ const UsersTable = () => {
                 <td>Rosameltrozo</td>
                 <td>Admin</td>
                 <td>rosalemo@gmail.com</td>
-                <Button className='boton-crud' variant="link"><i class="bi bi-pencil-square"></i></Button>
+                <Button className='boton-crud' variant="link"><i className="bi bi-pencil-square"></i></Button>
               </tr>
               <tr>
                 <td>Jorge</td>
                 <td>Avalos</td>
                 <td>Usuario</td>
                 <td>jorge@mail.com</td>
-                <Button className='boton-crud' variant="link"><i class="bi bi-pencil-square"></i></Button>
+                <Button className='boton-crud' variant="link"><i className="bi bi-pencil-square"></i></Button>
               </tr>
             </tbody>
             
