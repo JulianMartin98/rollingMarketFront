@@ -139,7 +139,7 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
                 </Form.Group>
 
                 <div>
-                    <Button type="submit" variant="link" className='boton-agregar-modal'>
+                    <Button type="submit" variant="link" className='button-add-modal'>
                         Editar Producto
                     </Button>
                 </div>

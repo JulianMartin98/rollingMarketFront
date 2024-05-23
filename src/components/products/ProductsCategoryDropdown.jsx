@@ -10,8 +10,8 @@ function ProductsCategoryDropdown() {
   };
 
   return (
-    <Dropdown className='titulo-admin2'>
-      <Dropdown.Toggle  variant="outline-success"  id="dropdown-basic">
+    <Dropdown>
+      <Dropdown.Toggle  variant="outline-warning"  id="dropdown-basic">
         Buscar por Categoría
       </Dropdown.Toggle>
       <Dropdown.Menu>

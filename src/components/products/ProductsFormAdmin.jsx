@@ -91,7 +91,7 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
 
 
             <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-1" >
+                <Form.Group className="mb-3" >
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control type="text"
                         value={producto.name}
@@ -105,7 +105,7 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
                         title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
                     />
                 </Form.Group>
-                <Form.Group className="mb-1">
+                <Form.Group className="mb-3">
                     <Form.Label>Categoria</Form.Label>
                     <Form.Select
                         value={producto.category}
@@ -121,7 +121,7 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
                         <option value="Otros">Otros</option>
                     </Form.Select>
                 </Form.Group>
-                <Form.Group className="mb-1" >
+                <Form.Group className="mb-3" >
                     <Form.Label>Descripcion</Form.Label>
                     <Form.Control type="text"
                         value={producto.description}
@@ -136,7 +136,7 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
                         title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
                     />
                 </Form.Group>
-                <Form.Group className="mb-1" >
+                <Form.Group className="mb-3" >
                     <Form.Label>Stock</Form.Label>
                     <Form.Control type="number"
                         value={producto.stock}
@@ -149,10 +149,10 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
                         pattern="[0-9]*"
                         placeholder="Stock del Producto" />
                 </Form.Group>
-                <Form.Group className="mb-1" >
+                <Form.Group className="mb-3" >
                     <Form.Label>Precio</Form.Label>
                     <InputGroup>
-                        <InputGroup.Text>$</InputGroup.Text>
+                        <InputGroup.Text className='bg-warning'>$</InputGroup.Text>
                         <Form.Control type="number"
                             value={producto.price}
                             onChange={handleChange}
@@ -165,14 +165,14 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
                         />
                     </InputGroup>
                 </Form.Group>
-                <Form.Group className="mb-1" >
+                <Form.Group className="mb-5" >
                     <Form.Label>Imagen</Form.Label>
                     <Form.Control type="text"
                         value={producto.image}
                         onChange={handleChange}
                         name='image'
                         placeholder="Imagen del Producto" />
-                    <Form.Text className="form-text" id="basic-addon4">
+                    <Form.Text id="basic-addon4">
                         Debe ingresar el link de una imagen válida.
                     </Form.Text>
                 </Form.Group>
@@ -181,11 +181,11 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
 
 
                     {editarProductos ? (
-                        <Button type="submit" variant="link" className='boton-agregar-modal'>
+                        <Button type="submit" variant="link" className='button-add-modal'>
                             Editar Producto
                         </Button>
                     ) : (
-                        <Button type="submit" variant='link' className='boton-agregar-modal' >
+                        <Button type="submit" variant='link' className='button-add-modal' >
                             Agregar Producto
                         </Button>
                     )}

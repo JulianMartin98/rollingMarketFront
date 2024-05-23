@@ -3,10 +3,10 @@ import { Button } from "react-bootstrap";
 
 const AddProductButton = ({ handleAgregarProducto }) => {
   return (
-    <div className="boton-agregar-producto-padre">
+    <div>
       <h2 className="titulo-admin">Administrar Productos</h2>
       <Button
-        className="boton-agregar-producto"
+        className="button-add-modal"
         onClick={handleAgregarProducto}
       >
         Agregar Producto

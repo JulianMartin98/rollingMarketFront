@@ -29,102 +29,99 @@ const ProductsTable = () => {
 
   return (
     <>
-    <div>
-      <div className="d-flex justify-content-center text-decoration-none">
-        <h2 className="titulo-admin">Administrar Productos</h2>
-        <Button
-          className="boton-agregar-producto"
-          onClick={handleAgregarProducto}
-        >
-          Agregar Producto
-        </Button>
-      </div>
-      {productos.length === 0 ? (
-        <h1 className="text-center">No hay productos para mostrar</h1>
-      ) : (
-        <Container>
-          <Table variant="link" responsive striped bordered hover>
-            <thead>
-              <tr className="subtitulo-tabla">
-                <th>Producto</th>
-                <th className="columna-categoria">Categoría</th>
-                <th>Descripción</th>
-                <th>Stock</th>
-                <th>Precio</th>
-                <th className="imagen columna-fecha">
-                  Fecha última Modificación
-                </th>
-                <th className="imagen columna-imagen">Imagen</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              {productos.map((producto) => (
-                <tr key={producto._id} className="contenido-tabla">
-                  <td>
-                    <h5></h5>
-                    {producto.name}
-                  </td>
-                  <td className="columna-categoria">
-                    <h5></h5>
-                    {producto.category}
-                  </td>
-                  <td>
-                    <h5></h5>
-                    {producto.description}
-                  </td>
-                  <td>
-                    <h5></h5>
-                    {producto.stock}
-                  </td>
-                  <td>
-                    <h5></h5>${producto.price}
-                  </td>
-                  <td className="columna-fecha">
-                    <h5></h5>
-                    {formatDate(producto.updatedAt)}
-                  </td>
-                  <td className="columna-imagen">
-                    <img
-                      src={producto.image}
-                      style={{ width: "70px", height: "60px" }}
-                    />
-                  </td>
-                  <td>
-                    <Button
-                      className="boton-crud"
-                      onClick={() => handleEdit(producto)}
-                      variant="link"
-                    >
-                      <i className="bi bi-pencil-square"></i>
-                    </Button>
-                    <Button
-                      className="boton-crud"
-                      variant="link"
-                      onClick={() => deleteProductos(producto._id)}
-                    >
-                      <i className="bi bi-trash"></i>
-                    </Button>
-                  </td>
+      <div>
+        <div className="d-flex justify-content-around align-items-center">
+          <h2 className="title-adminpage">Administrar Productos</h2>
+          <Button variant="success"
+            className="m-2 p-2 rounded-3 btn-md fw-bold"
+            onClick={handleAgregarProducto}
+          >
+            Agregar Producto
+          </Button>
+        </div>
+        {productos.length === 0 ? (
+          <h1 className="text-center">No hay productos para mostrar</h1>
+        ) : (
+          <Container>
+            <Table variant="link" responsive bordered className="border align-middle text-center mb-5" hover>
+              <thead className="table-warning table-group-divider">
+                <tr className="align-middle text-center">
+                  <th>Producto</th>
+                  <th>Categoría</th>
+                  <th>Descripción</th>
+                  <th>Stock</th>
+                  <th>Precio</th>
+                  <th>Fecha última Modificación</th>
+                  <th>Imagen</th>
+                  <th>Acciones</th>
                 </tr>
-              ))}
-            </tbody>
-          </Table>
-        </Container>
-      )}
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header className="modal-header" closeButton>
-          <Modal.Title>
-            {editarProductos ? "Editar Producto" : "Agregar Producto"}
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <ProductsForm
-            editarProductos={editarProductos}
-            handleClose={handleClose}
-          />
-        </Modal.Body>
-      </Modal>
+              </thead>
+              <tbody className="table-group-divider">
+                {productos.map((producto) => (
+                  <tr key={producto._id}>
+                    <td>
+                      <h5></h5>
+                      {producto.name}
+                    </td>
+                    <td>
+                      <h5></h5>
+                      {producto.category}
+                    </td>
+                    <td>
+                      <h5></h5>
+                      {producto.description}
+                    </td>
+                    <td>
+                      <h5></h5>
+                      {producto.stock}
+                    </td>
+                    <td>
+                      <h5></h5>${producto.price}
+                    </td>
+                    <td>
+                      <h5></h5>
+                      {formatDate(producto.updatedAt)}
+                    </td>
+                    <td>
+                      <img className="img-table"
+                        src={producto.image}
+                      />
+                    </td>
+                    <td>
+                      <Button
+                        className="button-crud-adminpage"
+                        onClick={() => handleEdit(producto)}
+                        variant="link"
+                      >
+                        <i className="bi bi-pencil-square"></i>
+                      </Button>
+                      <Button
+                        className="button-crud-adminpage"
+                        variant="link"
+                        onClick={() => deleteProductos(producto._id)}
+                      >
+                        <i className="bi bi-trash"></i>
+                      </Button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Container>
+        )}
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header className="p-2 m-2" closeButton>
+            <Modal.Title className="w-100 d-flex justify-content-center align-items-center title-adminpage">
+              {editarProductos ? "Editar Producto" : "Agregar Productos"}
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <ProductsForm
+              editarProductos={editarProductos}
+              handleClose={handleClose}
+            />
+          </Modal.Body>
+        </Modal>
       </div>
     </>
   );
