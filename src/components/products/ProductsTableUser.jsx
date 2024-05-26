@@ -4,9 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useContext, useState } from 'react';
 import { ProductsProvider } from '../../context/ProductsContext';
 import ProductsFormUser from '../products/ProductsFormUser';
-import ProductsCategoryDropdown from '../products/ProductsCategoryDropdown';
-
-
 
 
 const ProductsTableUser = () => {
@@ -39,7 +36,6 @@ const ProductsTableUser = () => {
 
     <>
       <div>
-        <ProductsCategoryDropdown />
         <h2 className='text-center mt-3 mb-3 title-adminpage'>Administrar Productos</h2>
         <div>
         </div>
