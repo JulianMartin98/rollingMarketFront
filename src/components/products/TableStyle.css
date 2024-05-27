@@ -18,3 +18,15 @@
     color: aliceblue !important;
     width: 100%;
 }
+
+.readonly-field{
+    background-color: #e9ecef;
+    color: #495057;
+    border: 1px solid #ced4da;
+    cursor: not-allowed;
+  }
+  
+  .readonly-field:focus {
+    box-shadow: none;
+    outline: none;
+  }

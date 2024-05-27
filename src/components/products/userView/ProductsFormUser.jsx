@@ -74,7 +74,7 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
                         value={producto.name}
                         readOnly
                         name='name'
-                        placeholder="Nombre del Producto"
+                        className="readonly-field" 
                     />
                 </Form.Group>
                 <Form.Group className="mb-1">
@@ -83,6 +83,7 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
                         value={producto.category}
                         readOnly
                         name="category"
+                        className="readonly-field" 
                     >
                     </Form.Control>
                 </Form.Group>
@@ -92,7 +93,7 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
                         value={producto.description}
                         readOnly
                         name='description'
-                        placeholder="Descripcion del Producto"
+                        className="readonly-field"
                     />
                 </Form.Group>
                 <Form.Group className="mb-1" >
@@ -115,7 +116,7 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
                             value={producto.price}
                             readOnly
                             name='price'
-                            placeholder="Precio del Producto"
+                            className="readonly-field"
                         />
                     </InputGroup>
                 </Form.Group>
@@ -125,7 +126,7 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
                         value={producto.image}
                         readOnly
                         name='image'
-                        placeholder="Imagen del Producto" />
+                        className="readonly-field" />
                     <Form.Text className="form-text" id="basic-addon4">
                         Debe ingresar el link de una imagen válida.
                     </Form.Text>
