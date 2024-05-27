@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductsTable from '../../components/products/adminView/ProductsTableAdmin';
-import UsersTable from '../../components/usersTable/UsersTable';
+import UsersTable from '../../components/users/UsersTable';
 
 export const AdminPage = () => {
   return (
