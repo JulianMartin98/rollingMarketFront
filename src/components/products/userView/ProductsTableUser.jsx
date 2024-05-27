@@ -55,7 +55,6 @@ const ProductsTableUser = () => {
                   <th>Precio</th>
                   <th>Fecha última Modificación</th>
                   <th>Imagen</th>
-                  <th>Acciones</th>
                 </tr>
               </thead>
               <tbody className="table-group-divider">
@@ -64,13 +63,11 @@ const ProductsTableUser = () => {
                     <td><h5></h5>{producto.name}</td>
                     <td><h5></h5>{producto.category}</td>
                     <td><h5></h5>{producto.description}</td>
-                    <td><h5></h5>{producto.stock}</td>
+                    <td><h5></h5>{producto.stock}
+                    <Button className='button-crud-adminpage' onClick={() => handleEdit(producto)} variant="link"><i className="bi bi-pencil-square"></i></Button></td>
                     <td><h5></h5>${producto.price}</td>
                     <td><h5></h5>{formatDate(producto.updatedAt)}</td>
                     <td><img className="img-table" src={producto.image} /></td>
-                    <td>
-                      <Button className='button-crud-adminpage' onClick={() => handleEdit(producto)} variant="link"><i className="bi bi-pencil-square"></i></Button>
-                    </td>
                   </tr>
                 ))}
               </tbody>

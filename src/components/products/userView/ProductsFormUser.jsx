@@ -83,14 +83,7 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
                         value={producto.category}
                         readOnly
                         name="category"
-                        as="select"
                     >
-                        <option value="">Selecciona una categoría</option>
-                        <option value="Bebidas">Bebidas</option>
-                        <option value="Golosinas">Golosinas</option>
-                        <option value="Limpieza">Limpieza</option>
-                        <option value="Lacteos">Lácteos</option>
-                        <option value="Otros">Otros</option>
                     </Form.Control>
                 </Form.Group>
                 <Form.Group className="mb-1" >
