@@ -1,6 +1,6 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import { useContext,useState } from 'react';
-import { ProductsProvider } from '../../context/ProductsContext';
+import { ProductsProvider } from '../../../context/ProductsContext';
 
 function ProductsCategoryDropdown() {
   const { getCategoria } = useContext(ProductsProvider);

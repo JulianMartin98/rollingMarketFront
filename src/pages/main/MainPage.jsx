@@ -1,6 +1,6 @@
 import React from 'react'
-import ProductsTableUser from '../../components/products/ProductsTableUser'
-import ProductsCategoryDropdown from '../../components/products/ProductsCategoryDropdown'
+import ProductsTableUser from '../../components/products/userView/ProductsTableUser'
+import ProductsCategoryDropdown from '../../components/products/userView/ProductsCategoryDropdown'
 
 const MainPage = () => {
     return (

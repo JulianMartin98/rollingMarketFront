@@ -1,9 +1,9 @@
 import { Table, Button, Modal, Container } from 'react-bootstrap';
-import '../products/TableStyle.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useContext, useState } from 'react';
-import { ProductsProvider } from '../../context/ProductsContext';
-import ProductsFormUser from '../products/ProductsFormUser';
+import { ProductsProvider } from '../../../context/ProductsContext';
+import ProductsFormUser from './ProductsFormUser.jsx';
+import '../TableStyle.css'
 
 
 const ProductsTableUser = () => {
