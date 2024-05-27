@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import { Button, Form, InputGroup } from 'react-bootstrap';
-import { ProductsProvider } from '../../context/ProductsContext';
+import { ProductsProvider } from '../../../context/ProductsContext';
 
 import Swal from 'sweetalert2';
 

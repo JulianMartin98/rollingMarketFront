@@ -1,9 +1,9 @@
 import { Table, Button, Modal, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useState } from "react";
-import { ProductsProvider } from "../../context/ProductsContext";
+import { ProductsProvider } from "../../../context/ProductsContext";
 import ProductsForm from "./ProductsFormAdmin";
-import '../products/TableStyle.css'
+import '../TableStyle.css'
 
 const ProductsTable = () => {
   const { productos, deleteProductos } = useContext(ProductsProvider);
