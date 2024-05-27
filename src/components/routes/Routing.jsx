@@ -5,6 +5,7 @@ import { AboutUsPage } from '../../pages/aboutUs/AboutUsPage';
 import { LoginPage } from '../../pages/login/LoginPage';
 import { Error404Page} from '../../pages/error404/Error404Page';
 import { AdminPage } from '../../pages/admin/AdminPage';
+import MainPage from '../../pages/main/MainPage';
 
 
 
@@ -31,6 +32,7 @@ export function Routing() {
           <Route path='/quienesSomos' element={<AboutUsPage />} />
           <Route path='/login' element={<Navigate to="/mainpage" />} />
           <Route path='/' element={<Navigate to="/mainpage" />} />
+          <Route path='/mainpage' element={<MainPage />} />
           {/* <Route path='/admin' element={<Navigate to="/mainpage" />} />       
           <Route path='/mainpage' element={<ProductoTablaUsuario />} />   REEMPLAZAR POR COMPONENTE USUARIO O SEA MAINPAGE */}
           <Route path="*" element={<Error404Page />} />
