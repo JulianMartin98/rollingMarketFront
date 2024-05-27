@@ -1,7 +1,7 @@
 import { Table, Button, Modal, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useContext, useState } from 'react';
-import { UsersProvider } from '../../context/UsersContext';
+import { UsersProvider } from '../../../context/UsersContext';
 
 const UsersTable = () => {
 
