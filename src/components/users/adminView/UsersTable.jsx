@@ -9,7 +9,7 @@ import UsersForm from './UsersForm';
 
 const UsersTable = () => {
 
-  const { usuarios} = useContext(UsersProvider);
+  const { usuarios ,deleteUsuario } = useContext(UsersProvider);
   const [editarUsuario, setEditarUsuario] = useState(null);
   const [show, setShow] = useState(false);
 
@@ -66,10 +66,7 @@ const UsersTable = () => {
                     <Button className="button-crud-adminpage"  onClick={() => handleEdit(usuario)} variant="link"><i className="bi bi-pencil-square"></i></Button></td>
                     <td>{usuario.email}</td>
                     <td>
-                      {/* <Button className="button-crud-adminpage" onClick={() => handleEdit(usuario)} variant="link"><i className="bi bi-pencil-square"></i></Button>
-                      <Button className="button-crud-adminpage" onClick={() => deleteUsuarios(usuario._id)} variant="link"><i className="bi bi-trash"></i></Button> */}
-                      
-                      <Button className="button-crud-adminpage" variant="link"><i className="bi bi-trash"></i></Button>
+                      <Button className="button-crud-adminpage" onClick={() => deleteUsuario(usuario._id)} variant="link"><i className="bi bi-trash"></i></Button>
                     </td>
                   </tr>
                 ))}
