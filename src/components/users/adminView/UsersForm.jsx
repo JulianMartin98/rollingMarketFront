@@ -1,7 +1,9 @@
 import { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { UsersProvider } from '../../../context/UsersContext';
+import '../../products/TableStyle.css'
 import Swal from 'sweetalert2';
+
 
 const UsersForm = ({ editarUsuario, handleClose }) => {
   const { addUser, editUsuario } = useContext(UsersProvider);
@@ -65,6 +67,9 @@ const UsersForm = ({ editarUsuario, handleClose }) => {
           name="name"
           placeholder="Nombre del Usuario"
           required
+          readOnly={!!editarUsuario} //para editar el campo es de solo lectura
+          className={editarUsuario ? 'readonly-field' : ''} // se aplica una clase condicional
+          
         />
       </Form.Group>
       <Form.Group className="mb-3">
@@ -75,7 +80,9 @@ const UsersForm = ({ editarUsuario, handleClose }) => {
           onChange={handleChange}
           name="surname"
           placeholder="Apellido del Usuario"
+          readOnly={!!editarUsuario}
           required
+          className={editarUsuario ? 'readonly-field' : ''}
         />
       </Form.Group>
       <Form.Group className="mb-3">
@@ -99,7 +106,9 @@ const UsersForm = ({ editarUsuario, handleClose }) => {
           onChange={handleChange}
           name="email"
           placeholder="Email del Usuario"
+          readOnly={!!editarUsuario}
           required
+          className={editarUsuario ? 'readonly-field' : ''}
         />
       </Form.Group>
       {!editarUsuario && (
