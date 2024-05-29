@@ -2,12 +2,28 @@ import { Table, Button, Modal, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useContext, useState } from 'react';
 import { UsersProvider } from '../../../context/UsersContext';
+import UsersForm from './UsersForm';
+
+
 
 
 const UsersTable = () => {
 
-  const { usuarios } = useContext(UsersProvider);
+  const { usuarios} = useContext(UsersProvider);
+  const [editarUsuario, setEditarUsuario] = useState(null);
+  const [show, setShow] = useState(false);
 
+  const handleClose = () => setShow(false);
+
+  const handleEdit = (usuario) => {
+    setEditarUsuario(usuario);
+    setShow(true);
+  };
+
+  const handleAgregarUsuario = () => {
+    setEditarUsuario(null);
+    setShow(true);
+  };
 
   return (
 
@@ -18,7 +34,7 @@ const UsersTable = () => {
           <h2 className="title-adminpage">Administrar Usuarios</h2>
           <Button variant="success"
             className="m-2 p-2 rounded-3 btn-md fw-bold"
-          // onClick={handleAgregarUsuario}
+            onClick={handleAgregarUsuario}
           >
             Agregar Usuario
           </Button>
@@ -47,7 +63,7 @@ const UsersTable = () => {
                     <td>{usuario.name}</td>
                     <td>{usuario.surname}</td>
                     <td>{usuario.rol}
-                    <Button className="button-crud-adminpage" variant="link"><i className="bi bi-pencil-square"></i></Button></td>
+                    <Button className="button-crud-adminpage"  onClick={() => handleEdit(usuario)} variant="link"><i className="bi bi-pencil-square"></i></Button></td>
                     <td>{usuario.email}</td>
                     <td>
                       {/* <Button className="button-crud-adminpage" onClick={() => handleEdit(usuario)} variant="link"><i className="bi bi-pencil-square"></i></Button>
@@ -60,9 +76,17 @@ const UsersTable = () => {
               </tbody>
             </Table>
           </Container>
+          
         )}
       </div>
-
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{editarUsuario ? 'Editar Usuario' : 'Agregar Usuario'}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <UsersForm editarUsuario={editarUsuario} handleClose={handleClose} />
+        </Modal.Body>
+      </Modal>
     </>
 
   );
