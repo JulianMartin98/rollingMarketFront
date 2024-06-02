@@ -105,7 +105,11 @@ const UsersTable = () => {
                         <i className="bi bi-pencil-square"></i>
                       </Button>
                     </td>
-                    <td>{usuario.email}</td>
+                    <td>
+                      {loggedInUserEmail === usuario.email && (
+                        <i className="bi bi-person-fill-lock" style={{ marginRight: '5px', fontSize: '24px', color: 'black' }}></i>
+                      )} {usuario.email}
+                    </td>
                     <td>
                       <Button
                         className="button-crud-adminpage"
