@@ -1,23 +1,55 @@
 import { Table, Button, Modal, Container } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { useContext, useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useContext, useState, useEffect } from 'react';
 import { UsersProvider } from '../../../context/UsersContext';
 import UsersForm from './UsersForm';
-
+import Swal from 'sweetalert2';
 
 
 
 const UsersTable = () => {
 
-  const { usuarios ,deleteUsuario } = useContext(UsersProvider);
+  const { usuarios, deleteUsuario } = useContext(UsersProvider);
   const [editarUsuario, setEditarUsuario] = useState(null);
   const [show, setShow] = useState(false);
+  const [loggedInUserEmail, setLoggedInUserEmail] = useState('');
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user && user.email) {
+      setLoggedInUserEmail(user.email);
+    }
+  }, []);
 
   const handleClose = () => setShow(false);
 
   const handleEdit = (usuario) => {
-    setEditarUsuario(usuario);
-    setShow(true);
+    if (usuario.email === loggedInUserEmail) {
+      Swal.fire({
+        position: 'center',
+        icon: 'warning',
+        title: 'No puedes editar tu propio usuario',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else {
+      setEditarUsuario(usuario);
+      setShow(true);
+    }
+  };
+
+  const handleDelete = (userId, userEmail) => {
+    if (userEmail === loggedInUserEmail) {
+      Swal.fire({
+        position: 'center',
+        icon: 'warning',
+        title: 'No puedes eliminar tu propio usuario',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else {
+      deleteUsuario(userId);
+    }
   };
 
   const handleAgregarUsuario = () => {
@@ -32,7 +64,8 @@ const UsersTable = () => {
       <div>
         <div className="d-flex justify-content-around align-items-center">
           <h2 className="title-adminpage">Administrar Usuarios</h2>
-          <Button variant="success"
+          <Button
+            variant="success"
             className="m-2 p-2 rounded-3 btn-md fw-bold"
             onClick={handleAgregarUsuario}
           >
@@ -45,7 +78,7 @@ const UsersTable = () => {
           <h1 className="text-center">No hay usuarios para mostrar</h1>
         ) : (
 
-          <Container >
+          <Container>
             <Table variant="link" responsive bordered className="border align-middle text-center mb-5" hover>
 
               <thead className="table-warning table-group-divider">
@@ -62,11 +95,25 @@ const UsersTable = () => {
                   <tr key={usuario._id}>
                     <td>{usuario.name}</td>
                     <td>{usuario.surname}</td>
-                    <td>{usuario.rol}
-                    <Button className="button-crud-adminpage"  onClick={() => handleEdit(usuario)} variant="link"><i className="bi bi-pencil-square"></i></Button></td>
+                    <td>
+                      {usuario.rol}
+                      <Button
+                        className="button-crud-adminpage"
+                        onClick={() => handleEdit(usuario)}
+                        variant="link"
+                      >
+                        <i className="bi bi-pencil-square"></i>
+                      </Button>
+                    </td>
                     <td>{usuario.email}</td>
                     <td>
-                      <Button className="button-crud-adminpage" onClick={() => deleteUsuario(usuario._id)} variant="link"><i className="bi bi-trash"></i></Button>
+                      <Button
+                        className="button-crud-adminpage"
+                        onClick={() => handleDelete(usuario._id, usuario.email)}
+                        variant="link"
+                      >
+                        <i className="bi bi-trash"></i>
+                      </Button>
                     </td>
                   </tr>
                 ))}
@@ -89,4 +136,4 @@ const UsersTable = () => {
   );
 };
 
-export default UsersTable
+export default UsersTable;
