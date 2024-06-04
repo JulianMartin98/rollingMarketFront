@@ -11,7 +11,7 @@ function ProductsCategoryDropdown() {
 
   return (
     <Dropdown>
-      <Dropdown.Toggle  variant="outline-danger"  id="dropdown-basic">
+      <Dropdown.Toggle  variant="danger m-2 p-2"  id="dropdown-basic">
         Buscar por Categoría
       </Dropdown.Toggle>
       <Dropdown.Menu>
