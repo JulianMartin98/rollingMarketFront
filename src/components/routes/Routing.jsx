@@ -21,8 +21,7 @@ export function Routing() {
           <Route path='/login' element={<Navigate to="/admin" />} />
           <Route path='/' element={<Navigate to="/admin" />} />
           <Route path='/admin' element={<AdminPage />} />
-          {/* <Route path='/mainpage' element={<ProductoTablaUsuario />} /> */}
-          {/* <Route path='/mainpage' element={<ProductoTablaUsuario />} /> */}
+          <Route path='/mainpage' element={<AdminPage />} />
         </Routes>
       );
     } else if (user.rol === 'usuario') {
@@ -33,8 +32,6 @@ export function Routing() {
           <Route path='/login' element={<Navigate to="/mainpage" />} />
           <Route path='/' element={<Navigate to="/mainpage" />} />
           <Route path='/mainpage' element={<MainPage />} />
-          {/* <Route path='/admin' element={<Navigate to="/mainpage" />} />       
-          <Route path='/mainpage' element={<ProductoTablaUsuario />} />   REEMPLAZAR POR COMPONENTE USUARIO O SEA MAINPAGE */}
           <Route path="*" element={<Error404Page />} />
         </Routes>
       );
