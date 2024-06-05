@@ -22,6 +22,7 @@ export function Routing() {
           <Route path='/' element={<Navigate to="/admin" />} />
           <Route path='/admin' element={<AdminPage />} />
           <Route path='/mainpage' element={<AdminPage />} />
+          <Route path="*" element={<Error404Page />} />
         </Routes>
       );
     } else if (user.rol === 'usuario') {
