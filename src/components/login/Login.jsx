@@ -12,7 +12,6 @@ const Login = ({handleClose,handleShow}) => {
   const [password, setPassword] = useState("");
   const [modalShow, setModalShow] = useState(false);
 
-
   const { loginUsuario, usuarioLogueado } = useContext(UsersProvider);
 
   const navigate = useNavigate();
@@ -59,7 +58,7 @@ const Login = ({handleClose,handleShow}) => {
     <div className="bodyLogin">
       <Container fluid className="containerLogin">
         <Row className="justify-content-center">
-          <Col className="d-flex justify-content-center colLogin" md={12}>
+          <Col className="d-flex justify-content-center colLogin" md={6}>
             <Card className="cardLoginPrincipal align-items-center">
               <img src={rollingMarketNaranja} alt="Imagen de registro" className="imagenRegistro" />
               <Form onSubmit={handleSubmit} className="formLogin d-flex d-flex flex-column">
