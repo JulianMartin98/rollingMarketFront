@@ -34,6 +34,7 @@ const Login = ({handleClose,handleShow}) => {
       });
       localStorage.setItem("user", JSON.stringify(usuario));
       navigate("/");
+      window.location.reload(true);
     }
   }, [usuarioLogueado]);
 
