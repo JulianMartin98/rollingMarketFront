@@ -33,7 +33,7 @@ const Login = ({handleClose,handleShow}) => {
         timer: 1500,
       });
       localStorage.setItem("user", JSON.stringify(usuario));
-      navigate("/contacto");
+      navigate("/");
     }
   }, [usuarioLogueado]);
 
