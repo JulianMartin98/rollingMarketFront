@@ -66,7 +66,7 @@ const Login = ({handleClose,handleShow}) => {
                 <div className="opcionContraseñaLogin">
                   <p>
                     ¿Aún no tenes una cuenta?{' '}
-                    <a className="etiquetaLogin" href="#" onClick={() => setModalShow(true)}>
+                    <a className="etiquetaLogin" href="*">
                       Solicitá tu alta de usuario
                     </a>
                   </p>
@@ -87,7 +87,7 @@ const Login = ({handleClose,handleShow}) => {
                 <div className="opcionRegistro">
                   <p>
                     ¿Olvidaste tu contraseña?{' '}
-                    <a className="etiquetaLogin" href="#">
+                    <a className="etiquetaLogin" href="*">
                       Recupera tu cuenta
                     </a>
                   </p>
