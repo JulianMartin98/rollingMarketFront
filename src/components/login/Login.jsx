@@ -7,7 +7,7 @@ import { UsersProvider } from "../../context/UsersContext";
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const Login = ({handleClose,handleShow}) => {
+const Login = ({handleClose,handleShow,isModal }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [modalShow, setModalShow] = useState(false);
@@ -58,7 +58,7 @@ const Login = ({handleClose,handleShow}) => {
     <div className="bodyLogin">
       <Container fluid className="containerLogin">
         <Row className="justify-content-center">
-          <Col className="d-flex justify-content-center colLogin" md={6}>
+          <Col className={`d-flex justify-content-center colLogin ${isModal ? 'col-md-12' : 'col-md-6'}`}> 
             <Card className="cardLoginPrincipal align-items-center">
               <img src={rollingMarketNaranja} alt="Imagen de registro" className="imagenRegistro" />
               <Form onSubmit={handleSubmit} className="formLogin d-flex d-flex flex-column">
