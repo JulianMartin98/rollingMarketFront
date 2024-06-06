@@ -129,7 +129,7 @@ const UsersTable = () => {
       </div>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{editarUsuario ? 'Editar Usuario' : 'Agregar Usuario'}</Modal.Title>
+          <Modal.Title className="w-100 d-flex justify-content-center align-items-center title-adminpage">{editarUsuario ? 'Editar Usuario' : 'Agregar Usuario'}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <UsersForm editarUsuario={editarUsuario} handleClose={handleClose} />

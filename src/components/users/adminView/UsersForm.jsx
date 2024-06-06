@@ -124,7 +124,7 @@ const UsersForm = ({ editarUsuario, handleClose }) => {
           />
         </Form.Group>
       )}
-      <Button type="submit" variant="primary">
+      <Button type="submit" variant="link" className='button-add-modal'>
         {editarUsuario ? 'Editar Usuario' : 'Agregar Usuario'}
       </Button>
     </Form>
