@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import UsersContext from './context/UsersContext';
+import ProductsContext from './context/ProductsContext';
 import { Navigator } from './components/navBar/Navigator';
 import Footer from './components/footer/Footer';
 import { Routing } from './components/routes/Routing';
@@ -14,11 +15,11 @@ function App() {
     <>
 
       <UsersContext>
-        {/* <ProductosContext> */}
+        <ProductsContext>
           <Navigator />
           <Routing/>
           <Footer />
-        {/* </ProductosContext> */}
+        </ProductsContext>
       </UsersContext>
 
     </>

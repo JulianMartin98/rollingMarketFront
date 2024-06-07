@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
+import Swal from 'sweetalert2';
 
 export const UsersProvider = createContext();
 
@@ -31,28 +32,59 @@ const UsersContext = ({ children }) => {
     }
   };
 
-
   const addUser = async (usuario) => {
     try {
-      await axios.post("http://localhost:4000/api/user/create", usuario);
-      await getUsers();
+      const token = localStorage.getItem("token");
+      
+      if (!token) {
+        throw new Error("Token no encontrado");
+      }
+  
+      const response = await axios.post("http://localhost:4000/api/user/create", usuario, {
+        headers: {
+          authorization: `${token}`,
+        },
+      });
+  
+      if (response.status === 201 || response.status === 200) {
+        await getUsers();
+      } else {
+        Swal.fire('Error', 'El email ya se encuentra registrado', 'error');
+      }
     } catch (error) {
-      console.log(error);
+      console.error('Error al añadir usuario:', error);
+      Swal.fire('Error', 'Hubo un problema al añadir el usuario', 'error');
     }
   };
+  
 
 
   const deleteUsuario = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:4000/api/user/delete/${id}`, {
-        headers: {
-          authorization: `${token}`,
-        }
+      const confirmacion = await Swal.fire({
+        title: '¿Estás seguro que deseas eliminar el usuario?',
+        text: 'Esta acción no se puede deshacer',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminar',
+        cancelButtonText: 'Cancelar'
       });
-      await getUsers();
+  
+      if (confirmacion.isConfirmed) {
+        await axios.delete(`http://localhost:4000/api/user/delete/${id}`, {
+          headers: {
+            authorization: `${token}`,
+          }
+        });
+        await getUsers();
+        Swal.fire('¡Eliminado!', 'El usuario ha sido eliminado correctamente', 'success');
+      }
     } catch (error) {
       console.log(error);
+      Swal.fire('¡Error!', 'Ha ocurrido un error al eliminar el usuario', 'error');
     }
   };
 
