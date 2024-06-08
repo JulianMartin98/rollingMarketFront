@@ -17,7 +17,7 @@ export function CardsContact() {
                 <Card.Text className='cardTextFondoContacto'>
                   Reserva tu propia web con un solo click!.
                 </Card.Text>
-                <Button variant="dark">Click Aquí!</Button>
+                <Button variant="dark" href="*">Click Aquí!</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -30,7 +30,7 @@ export function CardsContact() {
                 <Card.Text className='cardTextFondoContacto'>
                   Comunicate con nuestros asesores de forma inmediata.
                 </Card.Text>
-                <Button variant="dark">Click Aquí!</Button>
+                <Button variant="dark" href="*">Click Aquí!</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -43,7 +43,7 @@ export function CardsContact() {
                 <Card.Text className='cardTextFondoContacto'>
                   Forma parte de nuestro equipo para futuros desarrollos
                 </Card.Text>
-                <Button variant="dark">Click Aquí!</Button>
+                <Button variant="dark" href="*">Click Aquí!</Button>
               </Card.Body>
             </Card>
           </Col>
