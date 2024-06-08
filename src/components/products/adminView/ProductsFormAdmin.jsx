@@ -173,7 +173,7 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
                         name='image'
                         placeholder="Imagen del Producto" />
                     <Form.Text id="basic-addon4">
-                        Debe ingresar el link de una imagen válida.
+                        Debe ingresar un enlace válido a una imagen (formatos admitidos: jpg, jpeg, gif, png, bmp).
                     </Form.Text>
                 </Form.Group>
 
