@@ -1,4 +1,4 @@
-import { Table, Button, Modal, Container } from 'react-bootstrap';
+import { Table, Button, Modal, Container, Pagination } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useContext, useState, useEffect } from 'react';
 import { UsersProvider } from '../../../context/UsersContext';
@@ -12,6 +12,7 @@ const UsersTable = () => {
   const { usuarios, deleteUsuario } = useContext(UsersProvider);
   const [editarUsuario, setEditarUsuario] = useState(null);
   const [show, setShow] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
   const [loggedInUserEmail, setLoggedInUserEmail] = useState('');
 
   useEffect(() => {
@@ -57,10 +58,21 @@ const UsersTable = () => {
     setShow(true);
   };
 
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const usersPerPage = 2;
+  const totalPages = Math.ceil(usuarios.length / usersPerPage);
+
+  const indexOfLastUser = currentPage * usersPerPage;
+  const indexOfFirstUser = indexOfLastUser - usersPerPage;
+  const currentUsers = usuarios.slice(indexOfFirstUser, indexOfLastUser);
+
   return (
 
     <>
-
+    
       <div>
         <div className="d-flex justify-content-around align-items-center">
           <h2 className="title-adminpage">Administrar Usuarios</h2>
@@ -91,7 +103,7 @@ const UsersTable = () => {
                 </tr>
               </thead>
               <tbody className="table-group-divider">
-                {usuarios.users.map((usuario) => (
+                {currentUsers.map((usuario) => (
                   <tr key={usuario._id}>
                     <td>{usuario.name}</td>
                     <td>{usuario.surname}</td>
@@ -123,8 +135,20 @@ const UsersTable = () => {
                 ))}
               </tbody>
             </Table>
+            <Pagination className="custom-pagination">
+              {Array.from({ length: totalPages }, (_, i) => (
+                <Pagination.Item
+                  key={i + 1}
+                  active={i + 1 === currentPage}
+                  onClick={() => handlePageChange(i + 1)}
+                  style={{ backgroundColor: i + 1 === currentPage ? 'blue' : 'gray', color: 'white' }}
+                >
+                  {i + 1}
+                </Pagination.Item>
+              ))}
+            </Pagination>
           </Container>
-          
+
         )}
       </div>
       <Modal show={show} onHide={handleClose}>
@@ -136,7 +160,7 @@ const UsersTable = () => {
         </Modal.Body>
       </Modal>
     </>
-
+    
   );
 };
 
