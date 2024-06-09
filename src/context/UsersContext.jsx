@@ -26,7 +26,7 @@ const UsersContext = ({ children }) => {
           }
         }
       );
-      setUsuarios(response.data);
+      setUsuarios(response.data.users);
     } catch (error) {
       console.log(error);
     }
