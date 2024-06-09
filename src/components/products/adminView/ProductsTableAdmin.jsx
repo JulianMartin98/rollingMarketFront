@@ -12,7 +12,7 @@ const ProductsTable = () => {
   
   // manejo de estados para la paginacion
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 4;
+  const productsPerPage = 5;
   const totalPages = Math.ceil(productos.length / productsPerPage);
 
   // formateo de fecha
