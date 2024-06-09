@@ -4,6 +4,7 @@ import { useContext, useState, useEffect } from 'react';
 import { UsersProvider } from '../../../context/UsersContext';
 import UsersForm from './UsersForm';
 import Swal from 'sweetalert2';
+import '../../products/TableStyle.css'
 
 
 
@@ -141,7 +142,6 @@ const UsersTable = () => {
                   key={i + 1}
                   active={i + 1 === currentPage}
                   onClick={() => handlePageChange(i + 1)}
-                  style={{ backgroundColor: i + 1 === currentPage ? 'blue' : 'gray', color: 'white' }}
                 >
                   {i + 1}
                 </Pagination.Item>
@@ -160,7 +160,7 @@ const UsersTable = () => {
         </Modal.Body>
       </Modal>
     </>
-    
+
   );
 };
 
