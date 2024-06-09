@@ -1,4 +1,4 @@
-import { Table, Button, Modal, Container } from "react-bootstrap";
+import { Table, Button, Modal, Container, Pagination } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useState } from "react";
 import { ProductsProvider } from "../../../context/ProductsContext";
@@ -9,7 +9,13 @@ const ProductsTable = () => {
   const { productos, deleteProductos } = useContext(ProductsProvider);
   const [editarProductos, setEditarProductos] = useState(null);
   const [show, setShow] = useState(false);
-  //formateo de hora
+  
+  // manejo de estados para la paginacion
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 4;
+  const totalPages = Math.ceil(productos.length / productsPerPage);
+
+  // formateo de fecha
   const formatDate = (dateString) => {
     const options = { year: "numeric", month: "2-digit", day: "2-digit" };
     return new Date(dateString).toLocaleDateString(undefined, options);
@@ -26,6 +32,16 @@ const ProductsTable = () => {
     setEditarProductos(null); // Establece editarProductos en null al agregar un producto nuevo
     setShow(true);
   };
+
+  // control para el cambio de pagina
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  // manejo de productos en la pagina actual
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = productos.slice(indexOfFirstProduct, indexOfLastProduct);
 
   return (
     <>
@@ -57,7 +73,7 @@ const ProductsTable = () => {
                 </tr>
               </thead>
               <tbody className="table-group-divider">
-                {productos.map((producto) => (
+                {currentProducts.map((producto) => (
                   <tr key={producto._id}>
                     <td>
                       <h5></h5>
@@ -107,6 +123,17 @@ const ProductsTable = () => {
                 ))}
               </tbody>
             </Table>
+            <Pagination className="custom-pagination">
+              {Array.from({ length: totalPages }, (_, i) => (
+                <Pagination.Item
+                  key={i + 1}
+                  active={i + 1 === currentPage}
+                  onClick={() => handlePageChange(i + 1)}
+                >
+                  {i + 1}
+                </Pagination.Item>
+              ))}
+            </Pagination>
           </Container>
         )}
         <Modal show={show} onHide={handleClose}>
