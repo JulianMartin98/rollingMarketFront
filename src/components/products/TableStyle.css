@@ -26,7 +26,21 @@
     cursor: not-allowed;
   }
   
-  .readonly-field:focus {
+.readonly-field:focus {
     box-shadow: none;
     outline: none;
-  }
+}
+
+.custom-pagination .page-item.active .page-link {
+    background-color: #FF553B;
+    border-color: grey;
+}
+
+.custom-pagination .page-link {
+    color: black;
+}
+
+.custom-pagination {
+    margin-top: -30px;
+    margin-right: 20px;
+}
