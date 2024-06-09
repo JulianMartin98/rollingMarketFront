@@ -1,4 +1,4 @@
-import { Table, Button, Modal, Container } from 'react-bootstrap';
+import { Table, Button, Modal, Container, Pagination } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useContext, useState } from 'react';
 import { ProductsProvider } from '../../../context/ProductsContext';
@@ -11,6 +11,11 @@ const ProductsTableUser = () => {
   const { productos, deleteProductos } = useContext(ProductsProvider)
   const [editarProductos, setEditarProductos] = useState(null)
   const [show, setShow] = useState(false);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 8;
+  const totalPages = Math.ceil(productos.length / productsPerPage);
+
   //formateo de hora
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
@@ -31,6 +36,15 @@ const ProductsTableUser = () => {
     setEditarProductos(null); // Establece editarProductos en null al agregar un producto nuevo
     setShow(true);
   };
+
+  
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = productos.slice(indexOfFirstProduct, indexOfLastProduct);
 
   return (
 
@@ -58,7 +72,7 @@ const ProductsTableUser = () => {
                 </tr>
               </thead>
               <tbody className="table-group-divider">
-                {productos.map((producto) => (
+                {currentProducts.map((producto) => (
                   <tr>
                     <td><h5></h5>{producto.name}</td>
                     <td><h5></h5>{producto.category}</td>
@@ -73,6 +87,17 @@ const ProductsTableUser = () => {
               </tbody>
 
             </Table>
+            <Pagination className="custom-pagination">
+              {Array.from({ length: totalPages }, (_, i) => (
+                <Pagination.Item
+                  key={i + 1}
+                  active={i + 1 === currentPage}
+                  onClick={() => handlePageChange(i + 1)}
+                >
+                  {i + 1}
+                </Pagination.Item>
+              ))}
+            </Pagination>
           </Container>
         )}
         <Modal show={show} onHide={handleClose}>
