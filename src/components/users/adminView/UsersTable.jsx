@@ -125,7 +125,7 @@ const UsersTable = () => {
                     </td>
                     <td>
                       <Button
-                        className="button-crud-adminpage"
+                        className="button-crud-delete-adminpage"
                         onClick={() => handleDelete(usuario._id, usuario.email)}
                         variant="link"
                       >

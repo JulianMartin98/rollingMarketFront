@@ -112,7 +112,7 @@ const ProductsTable = () => {
                         <i className="bi bi-pencil-square"></i>
                       </Button>
                       <Button
-                        className="button-crud-adminpage"
+                        className="button-crud-delete-adminpage"
                         variant="link"
                         onClick={() => deleteProductos(producto._id)}
                       >

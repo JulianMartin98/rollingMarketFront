@@ -8,7 +8,13 @@
 }
 
 .button-crud-adminpage {
-    background-color: #FF553B !important;
+    background-color: #61b647 !important;
+    color: white !important;
+    margin: 5px !important;
+}
+
+.button-crud-delete-adminpage {
+    background-color: #FF0000 !important;
     color: white !important;
     margin: 5px !important;
 }
