@@ -29,16 +29,16 @@ const ProductsTable = () => {
   };
 
   const handleAgregarProducto = () => {
-    setEditarProductos(null); 
+    setEditarProductos(null);
     setShow(true);
   };
 
-  
+
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
-  
+
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = productos.slice(indexOfFirstProduct, indexOfLastProduct);

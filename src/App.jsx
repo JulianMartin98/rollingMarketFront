@@ -17,7 +17,7 @@ function App() {
       <UsersContext>
         <ProductsContext>
           <Navigator />
-          <Routing/>
+          <Routing />
           <Footer />
         </ProductsContext>
       </UsersContext>

@@ -22,7 +22,7 @@ const Footer = () => {
           <ul className="col-12 col-md-4">
             <h5 className="titleList">Dirección:</h5>
             <li className="article">
-            Gral. Paz 576, San Miguel de Tucumán, Tucumán.
+              Gral. Paz 576, San Miguel de Tucumán, Tucumán.
             </li>
             <hr />
             <h5 className="titleList">Horarios:</h5>

@@ -26,7 +26,7 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
         }));
     }
 
-    
+
     const isImageUrlValid = (url) => {
         const imageUrlPattern = /\.(jpeg|jpg|gif|png|bmp)$/i;
         const webUrlPattern = /^(https?:\/\/)?[^\s\/$.?#].[^\s]*$/i;
@@ -37,9 +37,9 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        
+
         if (!producto.image || !isImageUrlValid(producto.image)) {
-            
+
             producto.image = "https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg";
         }
 
@@ -53,7 +53,7 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
             timer: 1500,
         });
 
-        
+
         setProducto({
             id: "",
             name: "",

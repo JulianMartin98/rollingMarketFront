@@ -14,7 +14,7 @@ const UsersForm = ({ editarUsuario, handleClose }) => {
     surname: editarUsuario ? editarUsuario.surname : '',
     rol: editarUsuario ? editarUsuario.rol : '',
     email: editarUsuario ? editarUsuario.email : '',
-    password: '' // Solicita contraseña pero nunca la mostrara
+    password: ''
   });
 
   const handleChange = (e) => {
@@ -52,7 +52,7 @@ const UsersForm = ({ editarUsuario, handleClose }) => {
       surname: '',
       rol: '',
       email: '',
-      password: '' // Restablecer campo de contraseña
+      password: ''
     });
   };
 
@@ -67,9 +67,9 @@ const UsersForm = ({ editarUsuario, handleClose }) => {
           name="name"
           placeholder="Nombre del Usuario"
           required
-          readOnly={!!editarUsuario} //para editar el campo es de solo lectura
-          className={editarUsuario ? 'readonly-field' : ''} // se aplica una clase condicional
-          
+          readOnly={!!editarUsuario}
+          className={editarUsuario ? 'readonly-field' : ''}
+
         />
       </Form.Group>
       <Form.Group className="mb-3">
@@ -88,14 +88,14 @@ const UsersForm = ({ editarUsuario, handleClose }) => {
       <Form.Group className="mb-3">
         <Form.Label>Rol</Form.Label>
         <Form.Select
-            value={usuario.rol}
-            onChange={handleChange}
-            name="rol"
-            required
-            aria-label="Selecciona el rol del usuario">
-            <option value="">Selecciona un rol</option>
-            <option value="usuario">Usuario</option>
-            <option value="admin">Admin</option>
+          value={usuario.rol}
+          onChange={handleChange}
+          name="rol"
+          required
+          aria-label="Selecciona el rol del usuario">
+          <option value="">Selecciona un rol</option>
+          <option value="usuario">Usuario</option>
+          <option value="admin">Admin</option>
         </Form.Select>
       </Form.Group>
       <Form.Group className="mb-3">

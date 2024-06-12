@@ -25,7 +25,7 @@ export function MapsAndForm() {
 
               <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                 <Form.Label className='mt-3'>Dejanos tu consulta!</Form.Label>
-                <Form.Control as="textarea" rows={3} placeholder='Consulta' maxLength={155} minLength={10} required/>
+                <Form.Control as="textarea" rows={3} placeholder='Consulta' maxLength={155} minLength={10} required />
               </Form.Group>
               <Form.Group controlId="formBasicCheckbox" className='p-2'>
                 <Form.Check className='d-flex justify-content-center pb-2' type="checkbox" label="Estoy de acuerdo con los terminos y condiciones" required />

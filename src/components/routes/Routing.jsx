@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { ContactPage } from '../../pages/contact/ContactPage';
 import { AboutUsPage } from '../../pages/aboutUs/AboutUsPage';
 import { LoginPage } from '../../pages/login/LoginPage';
-import { Error404Page} from '../../pages/error404/Error404Page';
+import { Error404Page } from '../../pages/error404/Error404Page';
 import { AdminPage } from '../../pages/admin/AdminPage';
 import MainPage from '../../pages/main/MainPage';
 

@@ -25,24 +25,24 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
         })
     }
 
-    //Helper validador de link de la imagen
+
     const isImageUrlValid = (url) => {
-        const imageUrlPattern = /\.(jpeg|jpg|gif|png|bmp)$/i; // Extensiones de imágenes admitidas
+        const imageUrlPattern = /\.(jpeg|jpg|gif|png|bmp)$/i;
         const webUrlPattern = /^(https?:\/\/)?[^\s\/$.?#].[^\s]*$/i;
         return imageUrlPattern.test(url) && webUrlPattern.test(url);
     };
-    
+
 
 
 
     const handleSubmit = (e) => {
         e.preventDefault()
-                // verificacion del campo imagen que no este vacio o que no sea invalido
-                if (!producto.image || !isImageUrlValid(producto.image)) {
-                    // asignar un enlace por default si no es valido o esta vacio el campo
-                    producto.image = "https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg";
-                }
-        
+
+        if (!producto.image || !isImageUrlValid(producto.image)) {
+
+            producto.image = "https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg";
+        }
+
         if (editarProductos) {
             updateProductos(producto)
             handleClose()
@@ -98,10 +98,10 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
                         onChange={handleChange}
                         name='name'
                         placeholder="Nombre del Producto"
-                        minLength={2}  // Longitud mínima del nombre
-                        maxLength={100} // Longitud máxima del nombre
-                        required      // Campo obligatorio
-                        pattern="[A-Za-z0-9_\s]+" // Caracteres permitidos
+                        minLength={2}
+                        maxLength={100}
+                        required
+                        pattern="[A-Za-z0-9_\s]+"
                         title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
                     />
                 </Form.Group>
@@ -129,10 +129,10 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
                         required
                         name='description'
                         placeholder="Descripcion del Producto"
-                        minLength={3}  // Longitud mínima del nombre
-                        maxLength={50} // Longitud máxima del nombre
-                        // Campo obligatorio
-                        pattern="[A-Za-z0-9_\s]+" // Caracteres permitidos
+                        minLength={3}
+                        maxLength={50}
+
+                        pattern="[A-Za-z0-9_\s]+"
                         title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
                     />
                 </Form.Group>
@@ -159,9 +159,9 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
                             name='price'
                             pattern="[0-9]*"
                             placeholder="Precio del Producto"
-                            required // Campo obligatorio
-                            min={0} // Valor mínimo del precio
-                            step={1} // Incremento mínimo del precio
+                            required
+                            min={0}
+                            step={1}
                         />
                     </InputGroup>
                 </Form.Group>
@@ -193,7 +193,7 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
             </Form>
 
         </>
-    )
-}
+    );
+};
 
-export default ProductsForm
+export default ProductsForm;

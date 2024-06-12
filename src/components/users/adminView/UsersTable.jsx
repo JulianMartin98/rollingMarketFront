@@ -73,7 +73,7 @@ const UsersTable = () => {
   return (
 
     <>
-    
+
       <div>
         <div className="d-flex justify-content-around align-items-center">
           <h2 className="title-adminpage">Administrar Usuarios</h2>

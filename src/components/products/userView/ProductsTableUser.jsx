@@ -16,7 +16,7 @@ const ProductsTableUser = () => {
   const productsPerPage = 8;
   const totalPages = Math.ceil(productos.length / productsPerPage);
 
-  //formateo de hora
+
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     return new Date(dateString).toLocaleDateString(undefined, options);
@@ -33,11 +33,11 @@ const ProductsTableUser = () => {
 
 
   const handleAgregarProducto = () => {
-    setEditarProductos(null); // Establece editarProductos en null al agregar un producto nuevo
+    setEditarProductos(null);
     setShow(true);
   };
 
-  
+
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -78,7 +78,7 @@ const ProductsTableUser = () => {
                     <td><h5></h5>{producto.category}</td>
                     <td><h5></h5>{producto.description}</td>
                     <td><h5></h5>{producto.stock}
-                    <Button className='button-crud-adminpage' onClick={() => handleEdit(producto)} variant="link"><i className="bi bi-pencil-square"></i></Button></td>
+                      <Button className='button-crud-adminpage' onClick={() => handleEdit(producto)} variant="link"><i className="bi bi-pencil-square"></i></Button></td>
                     <td><h5></h5>${producto.price}</td>
                     <td><h5></h5>{formatDate(producto.updatedAt)}</td>
                     <td><img className="img-table" src={producto.image} /></td>
@@ -114,4 +114,4 @@ const ProductsTableUser = () => {
   );
 };
 
-export default ProductsTableUser
+export default ProductsTableUser;

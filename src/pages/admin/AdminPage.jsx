@@ -6,8 +6,8 @@ export const AdminPage = () => {
   return (
     <>
       <div className='bodyAdminPage m-0 py-5'>
-      <ProductsTable />
-      <UsersTable />
+        <ProductsTable />
+        <UsersTable />
       </div>
     </>
   )
