@@ -24,18 +24,20 @@ const Login = ({ handleClose, handleShow, isModal }) => {
         email: usuarioLogueado.email,
         rol: usuarioLogueado.rol,
       };
+
       Swal.fire({
         position: "center",
         icon: "success",
         title: "Bienvenido",
         showConfirmButton: false,
         timer: 1500,
+      }).then(() => {
+        localStorage.setItem("user", JSON.stringify(usuario));
+        navigate("/");
+        window.location.reload(true);
       });
-      localStorage.setItem("user", JSON.stringify(usuario));
-      navigate("/");
-      window.location.reload(true);
     }
-  }, [usuarioLogueado]);
+  }, [usuarioLogueado, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
