@@ -35,17 +35,17 @@ const UsersContext = ({ children }) => {
   const addUser = async (usuario) => {
     try {
       const token = localStorage.getItem("token");
-      
+
       if (!token) {
         throw new Error("Token no encontrado");
       }
-  
+
       const response = await axios.post("http://localhost:4000/api/user/create", usuario, {
         headers: {
           authorization: `${token}`,
         },
       });
-  
+
       if (response.status === 201 || response.status === 200) {
         await getUsers();
       } else {
@@ -56,7 +56,7 @@ const UsersContext = ({ children }) => {
       Swal.fire('Error', 'Hubo un problema al añadir el usuario', 'error');
     }
   };
-  
+
 
 
   const deleteUsuario = async (id) => {
@@ -72,7 +72,7 @@ const UsersContext = ({ children }) => {
         confirmButtonText: 'Sí, eliminar',
         cancelButtonText: 'Cancelar'
       });
-  
+
       if (confirmacion.isConfirmed) {
         await axios.delete(`http://localhost:4000/api/user/delete/${id}`, {
           headers: {
@@ -121,7 +121,7 @@ const UsersContext = ({ children }) => {
   };
 
 
-  
+
   const loginUsuario = async (usuario) => {
     try {
       const response = await axios.post(

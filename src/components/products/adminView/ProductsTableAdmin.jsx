@@ -9,13 +9,13 @@ const ProductsTable = () => {
   const { productos, deleteProductos } = useContext(ProductsProvider);
   const [editarProductos, setEditarProductos] = useState(null);
   const [show, setShow] = useState(false);
-  
-  // manejo de estados para la paginacion
+
+
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 5;
   const totalPages = Math.ceil(productos.length / productsPerPage);
 
-  // formateo de fecha
+
   const formatDate = (dateString) => {
     const options = { year: "numeric", month: "2-digit", day: "2-digit" };
     return new Date(dateString).toLocaleDateString(undefined, options);
@@ -29,16 +29,16 @@ const ProductsTable = () => {
   };
 
   const handleAgregarProducto = () => {
-    setEditarProductos(null); // Establece editarProductos en null al agregar un producto nuevo
+    setEditarProductos(null); 
     setShow(true);
   };
 
-  // control para el cambio de pagina
+  
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
-  // manejo de productos en la pagina actual
+  
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = productos.slice(indexOfFirstProduct, indexOfLastProduct);

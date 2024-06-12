@@ -6,11 +6,11 @@ const MainPage = () => {
     return (
         <>
             <div className='bodyAdminPage m-0 py-5'>
-                <ProductsCategoryDropdown/>
+                <ProductsCategoryDropdown />
                 <ProductsTableUser />
             </div>
         </>
     )
-}
+};
 
-export default MainPage
+export default MainPage;

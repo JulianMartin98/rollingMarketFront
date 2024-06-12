@@ -1,17 +1,17 @@
 import Dropdown from 'react-bootstrap/Dropdown';
-import { useContext,useState } from 'react';
+import { useContext } from 'react';
 import { ProductsProvider } from '../../../context/ProductsContext';
 
 function ProductsCategoryDropdown() {
   const { getCategoria } = useContext(ProductsProvider);
-  
+
   const handleCategorySelect = (categoria) => {
     getCategoria(categoria);
   };
 
   return (
     <Dropdown>
-      <Dropdown.Toggle  variant="danger m-2 p-2"  id="dropdown-basic">
+      <Dropdown.Toggle variant="danger m-2 p-2" id="dropdown-basic">
         Buscar por Categoría
       </Dropdown.Toggle>
       <Dropdown.Menu>

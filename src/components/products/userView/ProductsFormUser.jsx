@@ -26,9 +26,9 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
         }));
     }
 
-    //Helper validador de link de la imagen
+    
     const isImageUrlValid = (url) => {
-        const imageUrlPattern = /\.(jpeg|jpg|gif|png|bmp)$/i; // Extensiones de imágenes admitidas
+        const imageUrlPattern = /\.(jpeg|jpg|gif|png|bmp)$/i;
         const webUrlPattern = /^(https?:\/\/)?[^\s\/$.?#].[^\s]*$/i;
         return imageUrlPattern.test(url) && webUrlPattern.test(url);
     };
@@ -37,9 +37,9 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        // verificación del campo imagen que no este vacío o que no sea invalido
+        
         if (!producto.image || !isImageUrlValid(producto.image)) {
-            // asignar un enlace por defecto si no es valido o esta vacío el campo
+            
             producto.image = "https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg";
         }
 
@@ -53,7 +53,7 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
             timer: 1500,
         });
 
-        // Restablecer el estado del producto
+        
         setProducto({
             id: "",
             name: "",
@@ -74,7 +74,7 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
                         value={producto.name}
                         readOnly
                         name='name'
-                        className="readonly-field" 
+                        className="readonly-field"
                     />
                 </Form.Group>
                 <Form.Group className="mb-1">
@@ -83,7 +83,7 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
                         value={producto.category}
                         readOnly
                         name="category"
-                        className="readonly-field" 
+                        className="readonly-field"
                     >
                     </Form.Control>
                 </Form.Group>
@@ -139,7 +139,7 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
                 </div>
             </Form>
         </>
-    )
-}
+    );
+};
 
-export default ProductsFormUser
+export default ProductsFormUser;
