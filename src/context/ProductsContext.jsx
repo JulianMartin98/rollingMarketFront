@@ -12,7 +12,7 @@ const ProductsContext = ({ children }) => {
   const obtenerProductos = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("https://rollingmarketback.onrender.com/product/"
+      const response = await axios.get("https://rollingmarketbacktestrender.onrender.com/api/product/"
         , {
           headers: {
             authorization: `${token}`,
@@ -28,7 +28,7 @@ const ProductsContext = ({ children }) => {
   const addProducto = async (producto) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.post("https://rollingmarketback.onrender.com/product/create", producto
+      const response = await axios.post("https://rollingmarketbacktestrender.onrender.com/api/product/create", producto
         , {
           headers: {
             authorization: `${token}`,
@@ -45,7 +45,7 @@ const ProductsContext = ({ children }) => {
   const getCategoria = async (category) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get(`https://rollingmarketback.onrender.com/product/category/${category}`
+      const response = await axios.get(`https://rollingmarketbacktestrender.onrender.com/api/product/category/${category}`
 
         , {
           headers: {
@@ -73,7 +73,7 @@ const ProductsContext = ({ children }) => {
       });
 
       if (confirmacion.isConfirmed) {
-        await axios.delete(`https://rollingmarketback.onrender.com/product/delete/${id}`
+        await axios.delete(`https://rollingmarketbacktestrender.onrender.com/api/product/delete/${id}`
           , {
             headers: {
               authorization: `${token}`,
@@ -91,7 +91,7 @@ const ProductsContext = ({ children }) => {
   const updateProductos = async (producto) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.put(`https://rollingmarketback.onrender.com/product/update/${producto.id}`, producto
+      await axios.put(`https://rollingmarketbacktestrender.onrender.com/api/product/update/${producto.id}`, producto
         , {
           headers: {
             authorization: `${token}`,

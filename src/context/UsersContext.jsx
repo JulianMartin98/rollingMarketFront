@@ -19,7 +19,7 @@ const UsersContext = ({ children }) => {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "https://rollingmarketback.onrender.com/user/"
+        "https://rollingmarketbacktestrender.onrender.com/api/user/"
         , {
           headers: {
             authorization: `${token}`,
@@ -40,7 +40,7 @@ const UsersContext = ({ children }) => {
         throw new Error("Token no encontrado");
       }
 
-      const response = await axios.post("https://rollingmarketback.onrender.com/user/create", usuario, {
+      const response = await axios.post("https://rollingmarketbacktestrender.onrender.com/api/user/create", usuario, {
         headers: {
           authorization: `${token}`,
         },
@@ -74,7 +74,7 @@ const UsersContext = ({ children }) => {
       });
 
       if (confirmacion.isConfirmed) {
-        await axios.delete(`https://rollingmarketback.onrender.com/user/delete/${id}`, {
+        await axios.delete(`https://rollingmarketbacktestrender.onrender.com/api/user/delete/${id}`, {
           headers: {
             authorization: `${token}`,
           }
@@ -99,7 +99,7 @@ const UsersContext = ({ children }) => {
 
     try {
       await axios.put(
-        `https://rollingmarketback.onrender.com/user/update/${usuario.id}`,
+        `https://rollingmarketbacktestrender.onrender.com/api/user/update/${usuario.id}`,
         usuario,
         {
           headers: {
@@ -125,7 +125,7 @@ const UsersContext = ({ children }) => {
   const loginUsuario = async (usuario) => {
     try {
       const response = await axios.post(
-        "https://rollingmarketback.onrender.com/user/login",
+        "https://rollingmarketbacktestrender.onrender.com/api/user/login",
         usuario
       );
       console.log(response);
