@@ -58,13 +58,6 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
         } else {
             addProducto(producto);
             handleClose()
-            Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Producto Agregado",
-                showConfirmButton: false,
-                timer: 1500,
-            });
             setProducto({
                 _id: "",
                 name: "",
