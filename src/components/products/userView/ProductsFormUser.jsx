@@ -45,15 +45,6 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
 
         updateProductos(producto)
         handleClose()
-        Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Producto Editado",
-            showConfirmButton: false,
-            timer: 1500,
-        });
-
-
         setProducto({
             id: "",
             name: "",
