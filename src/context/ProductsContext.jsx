@@ -98,8 +98,10 @@ const ProductsContext = ({ children }) => {
           }
         });
       await obtenerProductos()
+      Swal.fire('El producto ha sido actualizado correctamente', 'success');
     } catch (error) {
       console.log(error)
+      Swal.fire('¡Error!', 'Ha ocurrido un error al actualizar el producto', 'error');
     }
   }
   useEffect(() => {
