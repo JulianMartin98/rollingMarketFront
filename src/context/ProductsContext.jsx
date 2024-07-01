@@ -36,9 +36,11 @@ const ProductsContext = ({ children }) => {
         });
 
       setProductos([...productos, response.data])
+      Swal.fire('¡Éxito!', 'El producto ha sido creado correctamente', 'success');
       obtenerProductos();
     } catch (error) {
       console.log(error)
+      Swal.fire('¡Error!', 'Ha ocurrido un error al crear el producto', 'error');
     }
   }
 
