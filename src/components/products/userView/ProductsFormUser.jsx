@@ -110,6 +110,9 @@ const ProductsFormUser = ({ editarProductos, handleClose }) => {
                             className="readonly-field"
                         />
                     </InputGroup>
+                    <Form.Text id="basic-addon4">
+                        Precio máximo: $1.000.000
+                    </Form.Text>
                 </Form.Group>
                 <Form.Group className="mb-1" >
                     <Form.Label>Imagen</Form.Label>

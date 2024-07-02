@@ -150,6 +150,9 @@ const ProductsForm = ({ editarProductos, handleClose }) => {
                             step={1}
                         />
                     </InputGroup>
+                    <Form.Text id="basic-addon4">
+                        Precio máximo: $1.000.000
+                    </Form.Text>
                 </Form.Group>
                 <Form.Group className="mb-5" >
                     <Form.Label>Imagen</Form.Label>
