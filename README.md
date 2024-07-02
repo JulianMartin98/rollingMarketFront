@@ -51,7 +51,8 @@
 ## Despliegue 📦  <a name="informacion"></a>
 
 _Nuestro deploy_:
-<!-- insetar link del deploy -->
+
+https://marketrolling.netlify.app/login
 
 ## Construido con 🛠️  <a name="tecnologias"></a>
 
