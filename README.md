@@ -31,7 +31,7 @@
   <img src= "https://github.com/JulianMartin98/rollingMarketFront/blob/feat/readME/src/assets/img/gifREADME/1CreandoCarpeta.gif"></img>
 
 
-  #### **2** Ingresa a nuestro repositorio en github y copia el link del repo https://github.com/alamodeg/rollingMarket.
+  #### **2** Ingresa a nuestro repositorio en github y copia el link del repo https://github.com/JulianMartin98/rollingMarketFront.
   <img src= "https://github.com/JulianMartin98/rollingMarketFront/blob/feat/readME/src/assets/img/gifREADME/2IngresandoARepo-ezgif.com-resize.gif"></img>
   
 
@@ -39,7 +39,7 @@
   <img src= "https://github.com/JulianMartin98/rollingMarketFront/blob/feat/readME/src/assets/img/gifREADME/3IngresandoTerminal-ezgif.com-resize.gif"></img>
   
   
-  #### 4. Utiliza el comando **git clone** seguido de la _URL_ que copiaste anteriormente. (__Ejemplo__: git clone https://github.com/alamodeg/rollingMarket). Presiona **Enter** y se descargará automáticamente el repositorio en tu máquina local.
+  #### 4. Utiliza el comando **git clone** seguido de la _URL_ que copiaste anteriormente. (__Ejemplo__: git clone https://github.com/JulianMartin98/rollingMarketFront.git). Presiona **Enter** y se descargará automáticamente el repositorio en tu máquina local.
   <img src="https://github.com/JulianMartin98/rollingMarketFront/blob/feat/readME/src/assets/img/gifREADME/4ClonandoRepo-ezgif.com-resize.gif"></img>
 
   
